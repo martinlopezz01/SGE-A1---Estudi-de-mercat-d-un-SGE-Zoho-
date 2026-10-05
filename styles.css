@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
-    --black: #0a0b0d;
-    --dark: #111318;
-    --dark-2: #181a20;
-    --white: #f7f7f4;
-    --muted: #92959e;
-    --line: rgba(255,255,255,.1);
+    --black: #070909;
+    --dark: #101315;
+    --dark-2: #171b1d;
+
+    --white: #f5f7f5;
+    --muted: #969d9a;
+    --muted-2: #646b68;
 
     --green: #00c875;
-    --green-light: #56e6a1;
+    --green-light: #58e7a2;
+
+    --line: rgba(255, 255, 255, .09);
+    --line-green: rgba(0, 200, 117, .3);
 
     --max-width: 1180px;
 }
@@ -28,12 +30,18 @@ body {
     background: var(--black);
     color: var(--white);
     font-family: "Inter", sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 
-/* =========================
-   PRESENTACIÓN
-========================= */
+/* =========================================================
+   PRESENTACIÓ
+========================================================= */
 
 .presentation {
     width: 100%;
@@ -41,16 +49,21 @@ body {
 
 .slide {
     position: relative;
+
     min-height: 100vh;
-    padding: 90px 8vw;
+
+    padding: 100px 8vw;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     overflow: hidden;
+
     background:
         radial-gradient(
             circle at 80% 20%,
-            rgba(0,200,117,.07),
+            rgba(0, 200, 117, .06),
             transparent 28%
         ),
         var(--black);
@@ -64,16 +77,16 @@ body {
     background:
         linear-gradient(
             120deg,
-            #07130f 0%,
+            #06120e 0%,
             #0b1713 50%,
-            #08100d 100%
+            #07100d 100%
         );
 }
 
 
-/* =========================
-   FONDO
-========================= */
+/* =========================================================
+   FONS
+========================================================= */
 
 .grid-bg {
     position: absolute;
@@ -95,40 +108,48 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    PORTADA
-========================= */
+========================================================= */
 
 .slide-cover {
     background:
         radial-gradient(
             circle at 75% 50%,
-            rgba(0,200,117,.18),
+            rgba(0, 200, 117, .18),
             transparent 30%
         ),
-        #080a0b;
+        #080a0a;
 }
 
 .cover-content {
     position: relative;
     z-index: 3;
-    max-width: 900px;
+
+    max-width: 950px;
 }
 
 .eyebrow {
     display: inline-block;
+
     margin-bottom: 25px;
 
     color: var(--green);
+
     font-size: 12px;
     font-weight: 700;
+
     letter-spacing: .22em;
+    text-transform: uppercase;
 }
 
 h1 {
     font-size: clamp(70px, 11vw, 150px);
+
     line-height: .9;
+
     letter-spacing: -.07em;
+
     font-weight: 800;
 }
 
@@ -139,11 +160,13 @@ h2 span {
 
 .subtitle {
     margin-top: 35px;
-    max-width: 600px;
+
+    max-width: 700px;
 
     color: var(--muted);
+
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .cover-line {
@@ -156,18 +179,21 @@ h2 span {
 }
 
 .small-text {
-    color: #686c75;
+    color: #686f6b;
+
     font-size: 13px;
 }
 
 
-/* =========================
+/* =========================================================
    ORBES
-========================= */
+========================================================= */
 
 .orb {
     position: absolute;
+
     border-radius: 50%;
+
     pointer-events: none;
 }
 
@@ -183,8 +209,8 @@ h2 span {
     background:
         radial-gradient(
             circle at 35% 35%,
-            rgba(86,230,161,.4),
-            rgba(0,200,117,.05) 45%,
+            rgba(86, 230, 161, .4),
+            rgba(0, 200, 117, .05) 45%,
             transparent 70%
         );
 
@@ -198,52 +224,59 @@ h2 span {
     right: 120px;
     top: 15%;
 
-    border: 1px solid rgba(0,200,117,.2);
+    border: 1px solid rgba(0, 200, 117, .2);
 }
 
 
-/* =========================
-   NÚMERO DE SLIDE
-========================= */
+/* =========================================================
+   NÚMERO DE SECCIÓ
+========================================================= */
 
 .slide-number {
     position: absolute;
+
     top: 40px;
     right: 8vw;
 
-    color: #454850;
+    color: #454b48;
+
     font-size: 12px;
     font-weight: 700;
+
     letter-spacing: .15em;
 }
 
 
-/* =========================
-   TÍTULOS
-========================= */
+/* =========================================================
+   TÍTOLS
+========================================================= */
 
 .section-heading {
     margin-bottom: 70px;
 }
 
 .section-heading h2 {
-    max-width: 800px;
+    max-width: 900px;
 
     font-size: clamp(42px, 6vw, 82px);
+
     line-height: .98;
+
     letter-spacing: -.055em;
 }
 
 
-/* =========================
-   INTRO
-========================= */
+/* =========================================================
+   INTRODUCCIÓ
+========================================================= */
 
 .content-grid {
     max-width: var(--max-width);
 
     display: grid;
+
     grid-template-columns: 220px 1fr;
+
     gap: 80px;
 
     align-items: start;
@@ -253,50 +286,61 @@ h2 span {
     color: var(--green);
 
     font-size: 150px;
+
     line-height: .7;
+
     font-weight: 800;
+
     letter-spacing: -.08em;
 
     opacity: .9;
 }
 
 .text-content {
-    max-width: 680px;
+    max-width: 760px;
 }
 
 .text-content p {
     margin-bottom: 25px;
 
     color: var(--muted);
+
     font-size: 17px;
+
     line-height: 1.8;
 }
 
 .text-content .lead {
     color: var(--white);
+
     font-size: 25px;
+
     line-height: 1.5;
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =========================================================
+   TARGETES
+========================================================= */
 
 .cards {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .card {
     position: relative;
 
-    min-height: 330px;
+    min-height: 350px;
+
     padding: 35px;
 
     border: 1px solid var(--line);
-    background: rgba(255,255,255,.025);
+
+    background: rgba(255, 255, 255, .025);
 
     transition:
         transform .3s ease,
@@ -307,40 +351,59 @@ h2 span {
 .card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(0,200,117,.5);
-    background: rgba(0,200,117,.05);
+    border-color: rgba(0, 200, 117, .5);
+
+    background: rgba(0, 200, 117, .05);
 }
 
 .card-number {
     position: absolute;
+
     top: 30px;
     right: 30px;
 
-    color: #4b4e56;
+    color: #4b514e;
+
     font-size: 12px;
 }
 
 .icon {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 
     color: var(--green);
+
     font-size: 42px;
 }
 
 .card h3 {
     margin-bottom: 15px;
+
     font-size: 25px;
 }
 
 .card p {
     color: var(--muted);
+
     line-height: 1.7;
 }
 
+.mini-list {
+    margin-top: 20px;
+    padding-left: 18px;
 
-/* =========================
+    color: var(--muted);
+
+    line-height: 1.9;
+}
+
+.mini-list li::marker {
+    color: var(--green);
+}
+
+
+/* =========================================================
    TIMELINE
-========================= */
+========================================================= */
 
 .timeline {
     width: 100%;
@@ -349,53 +412,239 @@ h2 span {
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 80px 1fr;
+
+    grid-template-columns: 100px 1fr;
+
     gap: 30px;
+
     align-items: center;
 }
 
 .timeline-dot {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     border: 1px solid var(--green);
+
     border-radius: 50%;
 
     color: var(--green);
+
     font-size: 12px;
     font-weight: 700;
+
+    text-align: center;
 }
 
 .timeline-item h3 {
     margin-bottom: 8px;
-    font-size: 25px;
+
+    font-size: 24px;
 }
 
 .timeline-item p {
+    max-width: 700px;
+
     color: var(--muted);
 }
 
 .timeline-line {
     width: 1px;
-    height: 55px;
-    margin: 0 0 0 32px;
+    height: 45px;
+
+    margin-left: 37px;
 
     background: var(--green);
-    opacity: .4;
+
+    opacity: .35;
 }
 
 
-/* =========================
+/* =========================================================
+   INFORMACIÓ GENERAL
+========================================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: var(--max-width);
+}
+
+.info-box {
+    padding: 35px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.info-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .15em;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+.info-box p {
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PLATAFORMES
+========================================================= */
+
+.platform-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    max-width: var(--max-width);
+}
+
+.platform {
+    padding: 30px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.platform-icon {
+    margin-bottom: 25px;
+
+    color: var(--green);
+
+    font-size: 30px;
+}
+
+.platform h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+}
+
+.platform p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ARQUITECTURA
+========================================================= */
+
+.architecture {
+    width: 100%;
+    max-width: 850px;
+}
+
+.architecture-layer {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 25px 30px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.architecture-layer.active {
+    border-color: rgba(0, 200, 117, .5);
+
+    background: rgba(0, 200, 117, .06);
+}
+
+.layer-number {
+    color: var(--green);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.architecture-layer h3 {
+    margin-bottom: 6px;
+
+    font-size: 21px;
+}
+
+.architecture-layer p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.architecture-arrow {
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 30px;
+
+    color: var(--green);
+
+    opacity: .6;
+}
+
+.security-note {
+    max-width: 850px;
+
+    margin-top: 30px;
+    padding: 20px 25px;
+
+    border-left: 2px solid var(--green);
+
+    background: rgba(0, 200, 117, .04);
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.security-note strong {
+    color: var(--green);
+}
+
+
+/* =========================================================
    FEATURES
-========================= */
+========================================================= */
 
 .feature-layout {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 100px;
 
     max-width: var(--max-width);
@@ -405,11 +654,13 @@ h2 span {
     padding: 50px;
 
     border-left: 3px solid var(--green);
-    background: rgba(0,200,117,.05);
+
+    background: rgba(0, 200, 117, .05);
 }
 
 .feature-label {
     color: var(--green);
+
     font-size: 12px;
     font-weight: 700;
 }
@@ -418,23 +669,29 @@ h2 span {
     margin: 80px 0 20px;
 
     font-size: 48px;
+
     letter-spacing: -.04em;
 }
 
 .feature-main p {
+    margin-bottom: 20px;
+
     color: var(--muted);
+
     line-height: 1.8;
 }
 
 .feature-list {
     display: flex;
+
     flex-direction: column;
-    gap: 0;
 }
 
 .feature {
     display: grid;
+
     grid-template-columns: 60px 1fr;
+
     gap: 20px;
 
     padding: 25px 0;
@@ -444,12 +701,14 @@ h2 span {
 
 .feature > span {
     color: var(--green);
+
     font-size: 12px;
     font-weight: 700;
 }
 
 .feature h3 {
     margin-bottom: 8px;
+
     font-size: 21px;
 }
 
@@ -458,82 +717,654 @@ h2 span {
 }
 
 
-/* =========================
-   COMPARATIVA
-========================= */
+/* =========================================================
+   BASES DE DADES
+========================================================= */
 
-.comparison {
+.database-grid {
     display: grid;
-    grid-template-columns: 1fr 80px 1fr;
-    gap: 40px;
 
-    max-width: 1000px;
-    width: 100%;
-}
+    grid-template-columns: repeat(3, 1fr);
 
-.comparison-column {
-    border: 1px solid var(--line);
-    padding: 35px;
-}
-
-.comparison-column h3 {
-    margin-bottom: 30px;
-    font-size: 25px;
-}
-
-.comparison-column.highlight {
-    border-color: rgba(0,200,117,.5);
-    background: rgba(0,200,117,.04);
-}
-
-.comparison-column.highlight h3 {
-    color: var(--green);
-}
-
-.comparison-item {
-    display: flex;
     gap: 20px;
 
-    padding: 20px 0;
-
-    border-top: 1px solid var(--line);
-
-    color: var(--muted);
+    max-width: var(--max-width);
 }
 
-.comparison-item span {
+.database-card {
+    position: relative;
+
+    padding: 35px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.db-number {
+    display: block;
+
+    margin-bottom: 50px;
+
     color: var(--green);
+
     font-size: 12px;
     font-weight: 700;
 }
 
-.comparison-arrow {
+.database-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+.database-card p {
+    min-height: 125px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+.tags,
+.language-tags,
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.tags span,
+.language-tags span,
+.skills span {
+    padding: 7px 11px;
+
+    border: 1px solid rgba(0, 200, 117, .25);
+
+    color: var(--green);
+
+    background: rgba(0, 200, 117, .05);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PASSOS
+========================================================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: var(--max-width);
+}
+
+.step {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.step-number {
+    color: var(--green);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+}
+
+.step p {
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MÒDULS PERSONALITZATS
+========================================================= */
+
+.custom-module-layout {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    max-width: var(--max-width);
+}
+
+.custom-module-info .lead {
+    margin-bottom: 25px;
+
+    color: var(--white);
+
+    font-size: 23px;
+
+    line-height: 1.5;
+}
+
+.custom-module-info p {
+    margin-bottom: 30px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.language-tags {
+    margin-top: 30px;
+}
+
+.language-table {
+    border-top: 1px solid var(--line);
+}
+
+.language-row {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 25px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--muted);
+}
+
+.language-row.header {
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.language-row strong {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   CODI
+========================================================= */
+
+.code-slide {
+    justify-content: flex-start;
+    padding-top: 120px;
+}
+
+.code-container {
+    width: 100%;
+    max-width: 1050px;
+
+    overflow-x: auto;
+
+    border: 1px solid rgba(0, 200, 117, .25);
+
+    background: #080b0a;
+
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, .3);
+}
+
+.code-container pre {
+    padding: 35px;
+
+    color: #d8e4df;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+.code-container code {
+    color: #d8e4df;
+}
+
+.code-footer {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.code-footer span {
+    color: var(--green);
+}
+
+.code-footer strong {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   COMPARATIVA
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 850px;
+
+    border-collapse: collapse;
+
+    background: rgba(255, 255, 255, .02);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px;
+
+    border-bottom: 1px solid var(--line);
+
+    text-align: left;
+}
+
+.comparison-table th {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.comparison-table td {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.comparison-table td:first-child {
+    color: var(--white);
+
+    font-weight: 600;
+}
+
+.comparison-table .current {
+    color: var(--green);
+
+    background: rgba(0, 200, 117, .05);
+}
+
+.table-note {
+    margin-top: 20px;
+
+    color: var(--muted-2);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FEINES
+========================================================= */
+
+.jobs-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    max-width: var(--max-width);
+}
+
+.job-card {
+    padding: 35px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .025);
+}
+
+.job-number {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: var(--green);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.job-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+.job-card p {
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+.salary-box {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: var(--max-width);
+
+    margin-top: 30px;
+
+    padding: 25px 30px;
+
+    border-left: 3px solid var(--green);
+
+    background: rgba(0, 200, 117, .05);
+}
+
+.salary-box div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.salary-box .eyebrow {
+    margin-bottom: 5px;
+}
+
+.salary-box strong {
+    color: var(--white);
+
+    font-size: 34px;
+}
+
+.salary-box div > span:last-child {
+    color: var(--muted);
+}
+
+.salary-box p {
+    max-width: 350px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   AVANTATGES / INCONVENIENTS
+========================================================= */
+
+.pros-cons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    max-width: var(--max-width);
+}
+
+.pros,
+.cons {
+    padding: 35px;
+
+    border: 1px solid var(--line);
+}
+
+.pros {
+    background: rgba(0, 200, 117, .04);
+
+    border-color: rgba(0, 200, 117, .2);
+}
+
+.cons {
+    background: rgba(255, 255, 255, .025);
+}
+
+.pros-title,
+.cons-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.pros-title span,
+.cons-title span {
+    width: 35px;
+    height: 35px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.pros-title span {
     color: var(--green);
-    font-size: 40px;
+
+    border: 1px solid var(--green);
+}
+
+.cons-title span {
+    color: #ff6969;
+
+    border: 1px solid #ff6969;
+}
+
+.pros-title h3,
+.cons-title h3 {
+    font-size: 25px;
+}
+
+.pros ul,
+.cons ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding-left: 20px;
+}
+
+.pros li,
+.cons li {
+    color: var(--muted);
+
+    line-height: 1.65;
+}
+
+.pros li::marker {
+    color: var(--green);
+}
+
+.cons li::marker {
+    color: #ff6969;
+}
+
+.pros strong,
+.cons strong {
+    color: var(--white);
 }
 
 
-/* =========================
-   FINAL
-========================= */
+/* =========================================================
+   FONTS
+========================================================= */
+
+.sources-slide {
+    justify-content: flex-start;
+
+    padding-top: 110px;
+}
+
+.sources {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    max-width: 1100px;
+}
+
+.sources a {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, .02);
+
+    transition: .25s ease;
+}
+
+.sources a:hover {
+    border-color: rgba(0, 200, 117, .45);
+
+    background: rgba(0, 200, 117, .04);
+
+    transform: translateX(4px);
+}
+
+.sources a > span {
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sources strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--white);
+
+    font-size: 14px;
+}
+
+.sources small {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONCLUSIÓ
+========================================================= */
 
 .final-slide {
-    min-height: 80vh;
+    min-height: 85vh;
+}
+
+.conclusion-text {
+    max-width: 700px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
 }
 
 
-/* =========================
+/* =========================================================
    RESPONSIVE
-========================= */
+========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
+
+    .cards,
+    .platform-grid,
+    .database-grid,
+    .jobs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-layout,
+    .custom-module-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+
+    .salary-box {
+        align-items: flex-start;
+
+        gap: 20px;
+
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 700px) {
 
     .slide {
         min-height: auto;
+
         padding: 80px 25px;
     }
 
@@ -542,11 +1373,17 @@ h2 span {
     }
 
     .slide-number {
+        top: 25px;
         right: 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
     }
 
     .content-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
     }
 
@@ -554,35 +1391,81 @@ h2 span {
         font-size: 90px;
     }
 
-    .cards {
+    .cards,
+    .platform-grid,
+    .database-grid,
+    .jobs-grid,
+    .info-grid,
+    .steps,
+    .sources {
         grid-template-columns: 1fr;
     }
 
     .card {
-        min-height: 250px;
+        min-height: auto;
     }
 
     .icon {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 
-    .feature-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+    .timeline-item {
+        grid-template-columns: 75px 1fr;
 
-    .comparison {
-        grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .comparison-arrow {
-        transform: rotate(90deg);
+    .timeline-dot {
+        width: 60px;
+        height: 60px;
+    }
+
+    .timeline-line {
+        margin-left: 30px;
+    }
+
+    .feature-main {
+        padding: 30px;
+    }
+
+    .feature-main h3 {
+        margin-top: 50px;
+
+        font-size: 36px;
+    }
+
+    .language-row {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .salary-box strong {
+        font-size: 27px;
     }
 
     .orb-1 {
         width: 300px;
         height: 300px;
+
         right: -150px;
     }
+
+    .orb-2 {
+        width: 170px;
+        height: 170px;
+
+        right: 50px;
+    }
+}
+
+
+/* =========================================================
+   SELECCIÓ DE TEXT
+========================================================= */
+
+::selection {
+    color: #00150c;
+
+    background: var(--green);
 }
